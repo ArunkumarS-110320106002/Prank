@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Important Message</title>
+<style>
+body {
+  background-color: black;
+  color: lime;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>⚠️ System Hacked ⚠️</h1>
+<p>Your phone data is being transferred...</p>
+<p id="count">0%</p>
+
+<script>
+let i = 0;
+let interval = setInterval(() => {
+  i++;
+  document.getElementById("count").innerText = i + "%";
+  if(i == 100){
+    clearInterval(interval);
+    document.body.innerHTML = "<h1>😂 April Fool 😂</h1>";
+  }
+}, 50);
+</script>
+
+</body>
+</html>
